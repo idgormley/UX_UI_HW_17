@@ -2,30 +2,27 @@ a {
     text-decoration: none;
 }
 
-#navBar {
+.navBar {
     display: flex;
     flex-direction: row;
     background-color: #1A1630;
     align-items: center;
     margin: -10px;
+    min-width: 320px;
 }
 
 
-#navBar>a {
-    width: 25%;
-    font-family: Teko;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 64px;
-    color: #F5AE05;
+.navBar>a {
     padding-left: 48px;
-
+    width: 25%;
+    min-width: 168px;
+    justify-content: start;
 }
 
 #navigation {
     display: flex;
     width: 75%;
+    min-width: 351px;
     align-items: center;
     justify-content: end;
     padding-right: 48px;
@@ -36,34 +33,65 @@ a {
     text-decoration: none;
 }
 
+.left, .center, .right {
+    display: flex;
+    align-items: center;
+}
+
+
+.center {
+    min-width: 216px;
+    justify-content: center;
+
+}
+
+.right {
+    width: 25%;
+    justify-content: end;
+    padding-right: 48px;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+    transform: scale(.5);
+
+}
+
+.icons img {
+    /* margin: 15px; */
+    cursor: pointer;
+    padding-left: 48px;
+}
+
 body {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: #28253D;
 }
 
 #about {
+    position: relative;
+    top: 60px;
     display: flex;
+    align-content: center;
+    justify-content: center;
     height: 557px;
 }
 
 #hero {
     position: relative;
-    width: 1116px;
-    height: 475px;
-    left: 162px;
-    top: 60px;
+    width: 78%;
+    height: 85%;
     background-color: #1A1630;
 }
 
 #hero h1 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 10px;
-    position: absolute;
-    width: 414px;
-    height: 116px;
-    left: 114px;
+    /* padding: 10px; */
+    position: relative;
+    left: 124px;
     top: 0px;
     color: #F5AE05;
 }
@@ -123,7 +151,7 @@ h1 {
     line-height: 96px;
 }
 
-h3 {
+h3, .navBar>a {
     font-family: Teko;
     font-style: normal;
     font-weight: normal;
@@ -170,25 +198,15 @@ h4, a {
     border-radius: 5px;
 }
 
-.icons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 25%;
-}
 
-.icons img {
-    margin: 15px;
-    cursor: pointer;
-}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     h1 {
         font-size: 40px;
         line-height: 56px;
     }
 
-    h3, #navBar>a  {
+    h3, .navBar>a {
         font-size: 32px;
         line-height: 40px;
     }
@@ -197,6 +215,6 @@ h4, a {
         font-size: 24px;
         line-height: 28px;
     }
-      
-    
+
+
 }
