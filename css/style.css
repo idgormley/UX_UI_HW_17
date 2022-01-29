@@ -188,7 +188,7 @@ h4, a {
         line-height: 56px;
     }
 
-    h3 {
+    h3, #navBar>a  {
         font-size: 32px;
         line-height: 40px;
     }
@@ -197,5 +197,6 @@ h4, a {
         font-size: 24px;
         line-height: 28px;
     }
-
+      
+    
 }
